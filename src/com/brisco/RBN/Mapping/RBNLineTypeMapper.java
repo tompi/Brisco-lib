@@ -41,9 +41,9 @@ public class RBNLineTypeMapper {
 			return 'Q';
 		case BidExplanation:
 			return '*';
+		default:
+			return ' ';
 		}
-		return ' ';
-
 	}
 
 	public static RBNLineType GetRBNLineType(char type) {

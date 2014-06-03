@@ -1,9 +1,7 @@
 package com.brisco.Score;
 
-
-import junit.framework.Assert;
-
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,11 +19,11 @@ public class CalculatorTest {
 		boardNotVulnerable = new Board(1);
 		boardVulnerable = new Board(4);
 	}
-	
+
 	@After
 	public void tearDown() throws Exception {
 	}
-	
+
 	@Test
 	public final void testGetNorthSouthScore_4HV10_equals_620() {
 		Contract contract = new Contract();
@@ -36,9 +34,10 @@ public class CalculatorTest {
 		contract.Suit = Suit.Hearts;
 		contract.Tricks = 10;
 		int actual = Calculator.GetNorthSouthPoints(contract, boardVulnerable);
-		
+
 		Assert.assertEquals(620, actual);
 	}
+
 	@Test
 	public final void testGetNorthSouthScore_4HXV7_equals_minus800() {
 		Contract contract = new Contract();
@@ -49,10 +48,10 @@ public class CalculatorTest {
 		contract.Suit = Suit.Hearts;
 		contract.Tricks = 7;
 		int actual = Calculator.GetNorthSouthPoints(contract, boardVulnerable);
-		
+
 		Assert.assertEquals(-800, actual);
 	}
-	
+
 	@Test
 	public final void testGetNorthSouthScore_2HVW8_equals_minus110() {
 		Contract contract = new Contract();
@@ -63,7 +62,7 @@ public class CalculatorTest {
 		contract.Suit = Suit.Hearts;
 		contract.Tricks = 8;
 		int actual = Calculator.GetNorthSouthPoints(contract, boardVulnerable);
-		
+
 		Assert.assertEquals(-110, actual);
 	}
 
@@ -76,8 +75,9 @@ public class CalculatorTest {
 		contract.ReDoubled = false;
 		contract.Suit = Suit.Hearts;
 		contract.Tricks = 8;
-		int actual = Calculator.GetNorthSouthPoints(contract, boardNotVulnerable);
-		
+		int actual = Calculator.GetNorthSouthPoints(contract,
+				boardNotVulnerable);
+
 		Assert.assertEquals(-470, actual);
 	}
 
@@ -91,7 +91,7 @@ public class CalculatorTest {
 		contract.Suit = Suit.Notrump;
 		contract.Tricks = 11;
 		int actual = Calculator.GetNorthSouthPoints(contract, boardVulnerable);
-		
+
 		Assert.assertEquals(660, actual);
 	}
 
@@ -104,8 +104,9 @@ public class CalculatorTest {
 		contract.ReDoubled = false;
 		contract.Suit = Suit.Diamonds;
 		contract.Tricks = 8;
-		int actual = Calculator.GetNorthSouthPoints(contract, boardNotVulnerable);
-		
+		int actual = Calculator.GetNorthSouthPoints(contract,
+				boardNotVulnerable);
+
 		Assert.assertEquals(-240, actual);
 	}
 
@@ -119,7 +120,7 @@ public class CalculatorTest {
 		contract.Suit = Suit.Spades;
 		contract.Tricks = 12;
 		int actual = Calculator.GetNorthSouthPoints(contract, boardVulnerable);
-		
+
 		Assert.assertEquals(-1600, actual);
 	}
 
@@ -132,8 +133,9 @@ public class CalculatorTest {
 		contract.ReDoubled = false;
 		contract.Suit = Suit.Notrump;
 		contract.Tricks = 13;
-		int actual = Calculator.GetNorthSouthPoints(contract, boardNotVulnerable);
-		
+		int actual = Calculator.GetNorthSouthPoints(contract,
+				boardNotVulnerable);
+
 		Assert.assertEquals(-1020, actual);
 	}
 
@@ -146,8 +148,9 @@ public class CalculatorTest {
 		contract.ReDoubled = false;
 		contract.Suit = Suit.Diamonds;
 		contract.Tricks = 7;
-		int actual = Calculator.GetNorthSouthPoints(contract, boardNotVulnerable);
-		
+		int actual = Calculator.GetNorthSouthPoints(contract,
+				boardNotVulnerable);
+
 		Assert.assertEquals(150, actual);
 	}
 
@@ -160,8 +163,9 @@ public class CalculatorTest {
 		contract.ReDoubled = false;
 		contract.Suit = Suit.Diamonds;
 		contract.Tricks = 7;
-		int actual = Calculator.GetNorthSouthPoints(contract, boardNotVulnerable);
-		
+		int actual = Calculator.GetNorthSouthPoints(contract,
+				boardNotVulnerable);
+
 		Assert.assertEquals(500, actual);
 	}
 
@@ -175,8 +179,8 @@ public class CalculatorTest {
 		contract.Suit = Suit.Diamonds;
 		contract.Tricks = 7;
 		int actual = Calculator.GetNorthSouthPoints(contract, boardVulnerable);
-		
+
 		Assert.assertEquals(800, actual);
 	}
-	
+
 }

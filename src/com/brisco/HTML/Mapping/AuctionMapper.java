@@ -38,6 +38,7 @@ public class AuctionMapper {
 			bids.add(null);
 		case North:
 			bids.add(null);
+		case West:
 		}
 		bids.addAll(auction.Bids);
 

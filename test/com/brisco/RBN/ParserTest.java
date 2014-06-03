@@ -1,7 +1,6 @@
 package com.brisco.RBN;
 
-import junit.framework.Assert;
-
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -62,5 +61,6 @@ public class ParserTest {
 		Assert.assertEquals(BidQuality.VeryPoor, auction.Bids.get(7).Quality);
 		Assert.assertEquals(true, auction.Bids.get(8).Double);
 		Assert.assertEquals(2, auction.Explanations.size());
+
 	}
 }
