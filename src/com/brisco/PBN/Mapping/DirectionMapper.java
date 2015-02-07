@@ -17,6 +17,8 @@ public class DirectionMapper {
 	}
 
 	public static String GetStringFromDirection(Direction direction) {
+		if (direction == null)
+			return "";
 		switch (direction) {
 		case West:
 			return "W";
